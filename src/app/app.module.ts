@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { OntologyComponent } from './ontology/ontology.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OntologyComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +17,6 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
