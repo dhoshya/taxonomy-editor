@@ -1,8 +1,38 @@
-<div class="home">
-  <button type="button" class="btn btn-default"
-    [ngStyle]="{'background-color': buttonColor}"
-    (click) = "showMe();"
-    (dblclick) = "revertMe();">
-    Food
-  </button>
+<div class="data">
+  <table>
+    <th>ID</th>
+    <th>Category</th>
+    <th>Sub-Category</th>
+    <th>Item</th>
+
+    <tr *ngFor = "let item of items" >
+
+      <td>{{item.id}}</td>
+      <td>{{item.category}}</td>
+      <td>{{item.subCategory}}</td>
+      <td>{{item.item}}</td>
+
+    </tr>
+  </table>
+</div>
+
+<div class="">
+  <a routerLink = "/addItem">
+    <button type="button" class="btn btn-default">
+      Add New Data
+    </button>
+  </a>
+
+  <a routerLink = "/deleteItem">
+    <button type="button" class="btn btn-default">
+      Delete Data
+    </button>
+  </a>
+
+  <a routerLink = "/updateItem">
+    <button type="button" class="btn btn-default">
+      Update Data
+    </button>
+  </a>
+
 </div>

@@ -1,0 +1,45 @@
+<h2>
+  Add New Item
+</h2>
+
+<h3 *ngIf="added">
+  {{addSuccess}}
+</h3>
+
+<form id="addItem"
+      #data = "ngForm"
+      (ngSubmit) = "addNew(data.value)">
+
+      <label>New Item Name</label>
+      <input  type="text"
+              name="item"
+              placeholder="Item Name"
+              ngModel
+              required> <br> <br>
+
+      <label>New Category Name</label>
+      <input type="text"
+              name="category"
+              placeholder="Category Name"
+              ngModel
+              required> <br> <br>
+
+      <label>New SubCategory Name</label>
+      <input type="text"
+              name="subCategory"
+              placeholder="SubCategory Name"
+              ngModel
+              required> <br> <br>
+
+      <button class="btn btn-success"
+              type="submit"
+              [disabled]="!data.valid"
+              >Add
+      </button>
+
+      <button type="button"
+              name="backButton"
+              routerLink = "/"
+              >Back
+      </button>
+</form>

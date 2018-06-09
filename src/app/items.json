@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "category": "Mammals",
+      "item": "Human"
+    },
+    {
+      "id": 2,
+      "category": "Mammals",
+      "item": "Whale"
+    },
+    {
+      "id": 3,
+      "category": "Food",
+      "item": "Rice"
+    },
+    {
+      "id": 4,
+      "category": "Food",
+      "item": "Beans"
+    },
+    {
+      "id": 5,
+      "category": "Food",
+      "item": "Tomato"
+    },
+    {
+      "id": 6,
+      "category": "Drinks",
+      "subCategory": "Canned Drinks",
+      "item": "Cola"
+    },
+    {
+      "id": 7,
+      "category": "Drinks",
+      "subCategory": "Canned Drinks",
+      "item": "RedBull"
+    },
+    {
+      "id": 8,
+      "category": "Drinks",
+      "subCategory": "Bottled Drinks",
+      "item": "Whiskey"
+    },
+    {
+      "id": 9,
+      "item": "Carrot",
+      "category": "Food",
+      "subCategory": "IDK"
+    }
+  ]
+}

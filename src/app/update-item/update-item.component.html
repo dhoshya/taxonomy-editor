@@ -1,0 +1,54 @@
+<h2>
+  Update Item
+</h2>
+
+<h3 *ngIf="updated">
+  {{updateSuccess}}
+</h3>
+
+<form id="updateItem"
+      #data = "ngForm"
+      (ngSubmit) = "updateItem(data.value)">
+
+      <label>ID</label>
+      <input type="text"
+              name="id"
+              placeholder="ID of item to update"
+              required
+              ngModel> <br> <br>
+
+      <label>Item</label>
+      <input type="text"
+              name="item"
+              placeholder="Enter value to update"
+              required
+              ngModel
+      > <br> <br>
+
+      <label>Category</label>
+      <input type="text"
+              name="category"
+              placeholder="Enter value to update"
+              required
+              ngModel
+      > <br> <br>
+
+      <label>SubCategory</label>
+      <input type="text"
+              name="subCategory"
+              placeholder="Enter value to update"
+              required
+              ngModel> <br> <br>
+
+      <button type="submit"
+              name="updateButton">
+                Update
+      </button>
+
+      <button type="button"
+              name="backButton"
+              routerLink = "/"
+              >Back
+      </button>
+
+</form>

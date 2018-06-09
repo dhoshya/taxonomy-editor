@@ -1,27 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Http, Response, Headers } from '@angular/http';
 
 @Component({
   selector: 'app-ontology',
   templateUrl: './ontology.component.html',
   styleUrls: ['./ontology.component.css']
 })
+
 export class OntologyComponent implements OnInit {
 
-  buttonColor: string;
+  items = [];
+  id: number;
 
-  constructor() {
-    this.buttonColor = '#000';
-   }
+  constructor(private http: Http) { }
 
-  showMe() {
-    this.buttonColor = '#933';
+  getItems() {
+    this.http.get('http://localhost:3000/items')
+    .subscribe(
+      (response: Response) => {
+        this.items = response.json();
+      }
+    )
   }
 
-  revertMe(){
-    this.buttonColor = '#000';
-  }
 
   ngOnInit() {
+    this.getItems();
   }
 
 }
